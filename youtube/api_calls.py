@@ -8,7 +8,7 @@ import google.oauth2.credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-AUTHORIZED_USER_FILE = 'youtube/credentials/credentials.json'
+AUTHORIZED_USER_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'credentials/credentials.json')
 
 try:
     credentials = google.oauth2.credentials.Credentials.from_authorized_user_file(
