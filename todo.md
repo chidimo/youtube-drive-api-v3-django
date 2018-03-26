@@ -1,0 +1,1 @@
+1. Get email or id of user and use it to generate a filename for that particular user's credentials
