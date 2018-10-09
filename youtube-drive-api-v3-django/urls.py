@@ -1,13 +1,13 @@
-"""youtubeapiv3 URL Configuration
+"""youtube-drive-api-v3-django URL Configuration
 """
 
 from django.contrib import admin
 from django.urls import path, include
 
-from youtube.views import homepage
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage, name='homepage'),
-    path('youtube/', include('youtube.urls')),
+    path('', views.home, name='home'),
+    path('google-api/', include('google_api.urls')),
 ]

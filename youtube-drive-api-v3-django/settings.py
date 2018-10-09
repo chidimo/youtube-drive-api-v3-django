@@ -4,20 +4,36 @@ Django settings for youtube-drive-api-v3-django project.
 
 import os
 
+
+import os
+from django.urls import reverse_lazy
+from django.core.exceptions import ImproperlyConfigured
+from django.contrib.messages import constants as messages
+
+from decouple import config, Csv
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ROOT_URLCONF = 'youtube-drive-api-v3-django.urls'
+SECRET_KEY = config('SECRET_KEY')
+
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3pmch(t^mn31m+dx#3jxyeeoq9g39^)_p7n+%2-25icdvzs2$z'
+# SECRET_KEY = '3pmch(t^mn31m+dx#3jxyeeoq9g39^)_p7n+%2-25icdvzs2$z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition

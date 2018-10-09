@@ -1,5 +1,9 @@
 \__pycache__ 
 **\__pycache__
 __pycache__
-youtube/credentials/
 youtube/secret_config.py
+
+drive_credentials.json
+drive_secret.json
+youtube_credentials.json
+youtube_secret.json

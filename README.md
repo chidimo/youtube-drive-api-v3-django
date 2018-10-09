@@ -47,10 +47,42 @@ The YouTube and Drive APIs v3 for all their simplicity, can be pretty confusing 
     `pip install google-auth-httplib2`
 
 ## Additional setup
-**Replace these when you clone the repo**
 
-1. API_KEY, CHANNEL_ID found in `google_api/api_calls.py`
-1. CLIENT_SECRETS_FILE location. This is made use of in `google_api/views.py`. Make sure to download your `client_secret.json` file and place it in the `google_api/credentials/` directory. You can always move this file somewhere else, but then you need to modify this line `CLIENT_SECRETS_FILE = "google_api/credentials/client_secret.json"` in the `google_api/views.py` file. The `client_secret.json` file is available for download in your project.
+1. Replace these when you clone the repo: `API_KEY`, `CHANNEL_ID` found in `google_api/api_calls.py`
+
+1. Your `google_api/credentials` folder should have the following files
+
+    `drive_credentials.json`
+
+    `drive_secret.json`
+
+    `youtube_credentials.json`
+
+    `youtube_secret.json`
+
+## Output of `pip freeze`
+
+```python
+cachetools==2.1.0
+certifi==2018.8.24
+chardet==3.0.4
+Django==2.1.2
+google-auth==1.5.1
+google-auth-httplib2==0.0.3
+google-auth-oauthlib==0.2.0
+httplib2==0.11.3
+idna==2.7
+oauthlib==2.1.0
+pyasn1==0.4.4
+pyasn1-modules==0.2.2
+python-decouple==3.1
+pytz==2018.5
+requests==2.19.1
+requests-oauthlib==1.0.0
+rsa==4.0
+six==1.11.0
+urllib3==1.23
+```
 
 ## Resources
 

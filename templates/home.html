@@ -1,33 +1,33 @@
 
 <html>
     <head>
-        <title>{% block title %}Welcome to youtubeapiv3{% endblock title %}</title>
+        <title>{% block title %}Welcome to Google Drive and YouTube API v3{% endblock title %}</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
-        <style>
-            h1 {color : blue;}
-        </style>
     </head>
 
-    <body>
-        <div class="container">
-            <ul class="nav">
-                <li class="nav-item active"><a href="/">youtubeapiv3</a></li>
-            </ul>
-        </div>
-        
+    <body style="padding-top: 20rem;">
+        <nav class="navbar fixed-top" style="background:midnightblue; height:15rem;">
+            <a class="navbar-brand" href="/">
+                <h3 style="color:blanchedalmond" title="/">
+                    Welcome to Google Drive and YouTube API v3
+                </h3>
+            </a>
+        </nav>
+
         <div class="container">
             {% block content %}
-            <h1>Welcome to youtubeapiv3</h1>
+
+            <p>This is the homepage of Google Drive and YouTube API v3.</p>
+            <p>This app lets you authorize a <code>django</code> app to manage your YouTube or Google Drive account.</p>
+            <p>To authorize this app to manage your youtube or google drive accounts please click below.</p>
             
-            <p>This is the homepage of youtubeapiv3. To authorize 
-                this app to use manage your youtube account please click this <a href="{% url 'youtube:authorize_youtube' %}" target="_blank">link</a></p>
-            
+            <h3><a href="{% url 'google-api:drive_authorize' %}" target="_blank">Authorize Drive</a></h3>
+            <h3><a href="{% url 'google-api:youtube_authorize' %}" target="_blank">Authorize YouTube</a></h3>
+
             {% endblock content %}
         </div>
     </body>
